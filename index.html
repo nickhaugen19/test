@@ -41,14 +41,18 @@
         </div>
     </div>
 	
-	<script>
-		function addBorder() {
-			const points = document.getElementsByClassName("point");
-			for (let i = 0; i < points.length; i++) {
-				points[i].style.border = "1px solid red";
-			}
-		}
-	</script>
+<script>
+const point = document.getElementById("point");
+point.addEventListener("click", addBorder);
+	
+function addBorder() {
+	const points = Array.from(document.getElementsByClassName("point"));
+	points.forEach(point => {
+		point.style.border = "2px solid green";
+	});
+}
+
+</script>
     
 </body>
 
